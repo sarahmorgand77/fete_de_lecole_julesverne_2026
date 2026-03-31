@@ -6,172 +6,167 @@
 <title>🎪 Fête de l'École Jules Verne 2026 — Inscriptions Bénévoles</title>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --rouge:#E63946;--jaune:#FFB703;--bleu:#219EBC;
-    --vert:#52B788;--violet:#9B5DE5;--orange:#FB8500;
-    --bg:#FFF8F0;--texte:#1a1a2e;--shadow:0 4px 20px rgba(0,0,0,0.10);
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--texte);min-height:100vh;
-    background-image:radial-gradient(circle at 10% 20%,#FFB70322 0%,transparent 40%),
-    radial-gradient(circle at 90% 80%,#E6394622 0%,transparent 40%),
-    radial-gradient(circle at 50% 50%,#219EBC11 0%,transparent 60%);}
-  header{background:linear-gradient(135deg,#E63946 0%,#FB8500 50%,#FFB703 100%);
-    padding:32px 20px 24px;text-align:center;position:relative;overflow:hidden;
-    box-shadow:0 6px 30px rgba(230,57,70,0.3);}
-  header::before{content:'';position:absolute;inset:0;
-    background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,0.07) 20px,rgba(255,255,255,0.07) 40px);}
-  .header-emojis{font-size:2rem;margin-bottom:8px;animation:bounce 2s infinite}
-  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-  h1{font-family:'Fredoka One',cursive;font-size:clamp(1.6rem,5vw,2.8rem);color:white;
-    text-shadow:3px 3px 0 rgba(0,0,0,0.2);letter-spacing:1px;position:relative}
-  .subtitle{color:rgba(255,255,255,0.92);font-size:0.92rem;margin-top:8px;font-weight:600;position:relative}
+:root{--rouge:#E63946;--jaune:#FFB703;--bleu:#219EBC;--vert:#52B788;--violet:#9B5DE5;--orange:#FB8500;--bg:#FFF8F0;--texte:#1a1a2e;--shadow:0 4px 20px rgba(0,0,0,.10)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--texte);min-height:100vh;
+  background-image:radial-gradient(circle at 10% 20%,#FFB70322 0%,transparent 40%),radial-gradient(circle at 90% 80%,#E6394622 0%,transparent 40%),radial-gradient(circle at 50% 50%,#219EBC11 0%,transparent 60%)}
 
-  .sync-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;
-    padding:9px 20px;background:white;border-bottom:2px dashed #FFB703;font-size:0.82rem;font-weight:700}
-  .sync-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-  .sync-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
-  .sync-ok{background:#52B788}.sync-err{background:#E63946;animation:none}.sync-load{background:#FFB703}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
-  .sync-text{color:#555}
-  .btn-admin-toggle{padding:6px 16px;border-radius:50px;border:2px solid #9B5DE5;background:white;
-    color:#9B5DE5;font-family:'Nunito',sans-serif;font-weight:800;font-size:0.78rem;cursor:pointer;
-    transition:all 0.2s;white-space:nowrap}
-  .btn-admin-toggle:hover,.btn-admin-toggle.active{background:#9B5DE5;color:white}
+/* HEADER */
+header{background:linear-gradient(135deg,#E63946 0%,#FB8500 50%,#FFB703 100%);padding:32px 20px 24px;text-align:center;position:relative;overflow:hidden;box-shadow:0 6px 30px rgba(230,57,70,.3)}
+header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(255,255,255,.07) 20px,rgba(255,255,255,.07) 40px)}
+.header-emojis{font-size:2rem;margin-bottom:8px;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+h1{font-family:'Fredoka One',cursive;font-size:clamp(1.6rem,5vw,2.8rem);color:white;text-shadow:3px 3px 0 rgba(0,0,0,.2);letter-spacing:1px;position:relative}
+.subtitle{color:rgba(255,255,255,.92);font-size:.92rem;margin-top:8px;font-weight:600;position:relative}
 
-  .legende{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:12px 20px;
-    background:#FFFBF5;border-bottom:1px solid #f0e0c8}
-  .legende-item{display:flex;align-items:center;gap:7px;font-size:0.79rem;font-weight:700}
-  .dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;border:2px solid rgba(0,0,0,0.1)}
-  .dot-libre{background:#f0f0f0}.dot-pris{background:var(--vert)}.dot-mat{background:var(--bleu)}
+/* SYNC BAR */
+.sync-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:9px 20px;background:white;border-bottom:2px dashed #FFB703;font-size:.82rem;font-weight:700}
+.sync-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.sync-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;animation:pulse 2s infinite}
+.sync-ok{background:#52B788}.sync-err{background:#E63946;animation:none}.sync-load{background:#FFB703}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.sync-text{color:#555}
+.btn-admin-toggle{padding:6px 16px;border-radius:50px;border:2px solid #9B5DE5;background:white;color:#9B5DE5;font-family:'Nunito',sans-serif;font-weight:800;font-size:.78rem;cursor:pointer;transition:all .2s;white-space:nowrap}
+.btn-admin-toggle:hover,.btn-admin-toggle.active{background:#9B5DE5;color:white}
 
-  main{padding:20px 14px 60px;max-width:100%;margin:0 auto}
+/* NAV TABS */
+.nav-tabs{display:flex;gap:0;background:white;border-bottom:3px solid #FFB703;overflow-x:auto}
+.tab-btn{padding:12px 24px;font-family:'Fredoka One',cursive;font-size:1rem;border:none;background:transparent;cursor:pointer;color:#aaa;border-bottom:4px solid transparent;transition:all .2s;white-space:nowrap}
+.tab-btn:hover{color:var(--orange)}
+.tab-btn.active{color:var(--rouge);border-bottom-color:var(--rouge);background:#FFF8F0}
 
-  .stats-bar{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:18px;justify-content:center}
-  .stat-chip{background:white;border-radius:50px;padding:9px 18px;font-weight:800;font-size:0.86rem;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);border:2px solid #FFB703;display:flex;align-items:center;gap:8px}
-  .stat-num{font-family:'Fredoka One',cursive;font-size:1.2rem;color:var(--rouge)}
+/* LÉGENDE */
+.legende{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;padding:12px 20px;background:#FFFBF5;border-bottom:1px solid #f0e0c8}
+.legende-item{display:flex;align-items:center;gap:7px;font-size:.79rem;font-weight:700}
+.dot{width:12px;height:12px;border-radius:50%;flex-shrink:0;border:2px solid rgba(0,0,0,.1)}
+.dot-libre{background:#f0f0f0}.dot-pris{background:var(--vert)}.dot-mat{background:var(--bleu)}
 
-  .admin-panel{display:none;background:white;border:3px solid #9B5DE5;border-radius:20px;
-    padding:20px 24px;margin-bottom:20px;box-shadow:0 4px 20px rgba(155,93,229,0.15)}
-  .admin-panel.visible{display:block}
-  .admin-panel h3{font-family:'Fredoka One',cursive;color:#9B5DE5;font-size:1.1rem;margin-bottom:14px}
-  .admin-actions{display:flex;gap:12px;flex-wrap:wrap}
-  .btn-admin{padding:10px 22px;border:none;border-radius:12px;font-family:'Nunito',sans-serif;
-    font-weight:800;font-size:0.88rem;cursor:pointer;transition:all 0.2s}
-  .btn-danger{background:#FFE8E8;color:#E63946;border:2px solid #E63946}
-  .btn-danger:hover{background:#E63946;color:white}
-  .btn-export{background:#EBF8FF;color:#219EBC;border:2px solid #219EBC}
-  .btn-export:hover{background:#219EBC;color:white}
-  .btn-logout{background:#FFF3CD;color:#7B5500;border:2px solid #FFB703}
-  .btn-logout:hover{background:#FFB703;color:white}
-  .admin-badge{display:inline-block;background:#9B5DE5;color:white;border-radius:50px;
-    padding:3px 12px;font-size:0.72rem;font-weight:800;margin-left:8px;vertical-align:middle}
+/* SECTION PANELS */
+.section-panel{display:none}
+.section-panel.active{display:block}
 
-  .table-wrap{overflow-x:auto;border-radius:20px;box-shadow:var(--shadow);border:3px solid #FFB703}
-  table{width:100%;border-collapse:collapse;background:white;min-width:1000px}
-  thead tr th{padding:12px 8px;font-family:'Fredoka One',cursive;font-size:0.9rem;letter-spacing:0.5px}
-  .th-stand{background:#1a1a2e;color:white;font-family:'Nunito',sans-serif;font-weight:800;
-    font-size:0.8rem;border-radius:17px 0 0 0;text-align:left;padding-left:16px;min-width:180px;
-    position:sticky;left:0;z-index:5}
-  .th-materiel{background:linear-gradient(135deg,#219EBC,#023E8A);color:white;text-align:center;
-    min-width:112px;font-size:0.76rem;line-height:1.4}
-  .th-complement{background:linear-gradient(135deg,#9B5DE5,#6A0572);color:white;text-align:center;
-    min-width:155px;font-size:0.76rem;line-height:1.4}
-  .th-creneau{background:linear-gradient(135deg,#E63946,#FB8500);color:white;text-align:center;min-width:110px}
-  .th-creneau:last-child{border-radius:0 17px 0 0}
+main{padding:20px 14px 60px;max-width:100%;margin:0 auto}
 
-  .stand-name{font-weight:800;font-size:0.87rem;padding:8px 14px;text-align:left;white-space:nowrap;
-    border-right:3px solid #f0f0f0;position:sticky;left:0;z-index:2}
-  .stand-name .emoji{margin-right:6px}
-  tbody tr:nth-child(odd) .stand-name{background:#FFF8F0}
-  tbody tr:nth-child(even) .stand-name{background:#F8FBFF}
+/* STATS */
+.stats-bar{display:flex;gap:13px;flex-wrap:wrap;margin-bottom:18px;justify-content:center}
+.stat-chip{background:white;border-radius:50px;padding:9px 18px;font-weight:800;font-size:.86rem;box-shadow:0 2px 10px rgba(0,0,0,.08);border:2px solid #FFB703;display:flex;align-items:center;gap:8px}
+.stat-num{font-family:'Fredoka One',cursive;font-size:1.2rem;color:var(--rouge)}
 
-  .cell{padding:4px 5px;text-align:center;border:1px solid #f0f0f0;vertical-align:top}
-  tbody tr:nth-child(odd) .cell{background:#FFF8F0}
-  tbody tr:nth-child(even) .cell{background:#F8FBFF}
-  .slots{display:flex;flex-direction:column;gap:3px}
+/* ADMIN PANEL */
+.admin-panel{display:none;background:white;border:3px solid #9B5DE5;border-radius:20px;padding:20px 24px;margin-bottom:20px;box-shadow:0 4px 20px rgba(155,93,229,.15)}
+.admin-panel.visible{display:block}
+.admin-panel h3{font-family:'Fredoka One',cursive;color:#9B5DE5;font-size:1.1rem;margin-bottom:14px}
+.admin-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn-admin{padding:10px 22px;border:none;border-radius:12px;font-family:'Nunito',sans-serif;font-weight:800;font-size:.88rem;cursor:pointer;transition:all .2s}
+.btn-danger{background:#FFE8E8;color:#E63946;border:2px solid #E63946}.btn-danger:hover{background:#E63946;color:white}
+.btn-export{background:#EBF8FF;color:#219EBC;border:2px solid #219EBC}.btn-export:hover{background:#219EBC;color:white}
+.btn-logout{background:#FFF3CD;color:#7B5500;border:2px solid #FFB703}.btn-logout:hover{background:#FFB703;color:white}
+.admin-badge{display:inline-block;background:#9B5DE5;color:white;border-radius:50px;padding:3px 12px;font-size:.72rem;font-weight:800;margin-left:8px;vertical-align:middle}
 
-  .cell-mat{padding:6px;border:1px solid #f0f0f0;vertical-align:middle;text-align:center}
-  tbody tr:nth-child(odd) .cell-mat{background:#EBF8FF}
-  tbody tr:nth-child(even) .cell-mat{background:#F0FAFF}
-  .mat-select{width:100%;padding:6px 4px;border:2px solid #BDE0F4;border-radius:10px;
-    font-family:'Nunito',sans-serif;font-size:0.75rem;font-weight:700;background:white;
-    cursor:pointer;color:var(--texte);outline:none;text-align:center}
-  .mat-oui{background:#D8F3DC!important;border-color:var(--vert)!important;color:#2D6A4F!important}
-  .mat-non{background:#FFE8E8!important;border-color:var(--rouge)!important;color:#9B2226!important}
-  .mat-partiel{background:#FFF3CD!important;border-color:var(--jaune)!important;color:#7B5500!important}
+/* NOTICE */
+.notice{background:#FFF3CD;border-left:5px solid #FFB703;border-radius:0 12px 12px 0;padding:12px 16px;margin-bottom:18px;font-size:.85rem;font-weight:700;color:#7B5500}
+.notice span{font-size:1.1rem;margin-right:6px}
 
-  .cell-comp{padding:6px;border:1px solid #f0f0f0;vertical-align:middle}
-  tbody tr:nth-child(odd) .cell-comp{background:#F5F0FF}
-  tbody tr:nth-child(even) .cell-comp{background:#FAF7FF}
-  .comp-input{width:100%;padding:7px 8px;border:2px solid #E0D5FF;border-radius:10px;
-    font-family:'Nunito',sans-serif;font-size:0.75rem;font-weight:600;background:white;
-    color:var(--texte);outline:none}
-  .comp-input:focus{border-color:var(--violet)}
-  .comp-input::placeholder{color:#ccc;font-style:italic}
+/* TABLE */
+.table-wrap{overflow-x:auto;border-radius:20px;box-shadow:var(--shadow);border:3px solid #FFB703;margin-bottom:24px}
+table{width:100%;border-collapse:collapse;background:white;min-width:900px}
+thead tr th{padding:12px 8px;font-family:'Fredoka One',cursive;font-size:.9rem;letter-spacing:.5px}
+.th-stand{background:#1a1a2e;color:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:.8rem;border-radius:17px 0 0 0;text-align:left;padding-left:16px;min-width:180px;position:sticky;left:0;z-index:5}
+.th-mat{background:linear-gradient(135deg,#219EBC,#023E8A);color:white;text-align:center;min-width:112px;font-size:.76rem;line-height:1.4}
+.th-comp{background:linear-gradient(135deg,#9B5DE5,#6A0572);color:white;text-align:center;min-width:155px;font-size:.76rem;line-height:1.4}
+.th-cr{background:linear-gradient(135deg,#E63946,#FB8500);color:white;text-align:center;min-width:110px}
+.th-cr:last-child{border-radius:0 17px 0 0}
+/* Montage/démontage headers */
+.th-montage{background:linear-gradient(135deg,#52B788,#2D6A4F);color:white;text-align:center;min-width:130px}
+.th-demontage{background:linear-gradient(135deg,#219EBC,#023E8A);color:white;text-align:center;min-width:130px}
+.th-materiel-dispo{background:linear-gradient(135deg,#FB8500,#E63946);color:white;text-align:center;min-width:200px;border-radius:0 17px 0 0;font-size:.76rem}
+/* Buvette headers */
+.th-buvette{background:linear-gradient(135deg,#9B5DE5,#6A0572);color:white;text-align:center;min-width:160px;font-size:.78rem;line-height:1.4}
 
-  .btn-inscrire{width:100%;padding:5px 3px;border:2px dashed #ccc;background:transparent;
-    border-radius:8px;font-family:'Nunito',sans-serif;font-size:0.7rem;color:#aaa;
-    cursor:pointer;transition:all 0.2s;font-weight:600}
-  .btn-inscrire:hover{border-color:var(--vert);color:var(--vert);background:#52B78811;transform:scale(1.03)}
-  .inscrit{background:linear-gradient(135deg,#52B788,#40916C)!important;color:white;
-    border:2px solid #40916C!important;border-radius:8px;padding:4px 3px;font-size:0.7rem;
-    font-weight:800;cursor:pointer;width:100%;font-family:'Nunito',sans-serif;transition:all 0.2s;line-height:1.3}
-  .inscrit:hover{background:linear-gradient(135deg,#E63946,#c1121f)!important;
-    border-color:#c1121f!important;transform:scale(1.03)}
-  .inscrit:hover::after{content:' ✕'}
-  .admin-mode .inscrit{background:linear-gradient(135deg,#E63946,#c1121f)!important;border-color:#c1121f!important}
-  .admin-mode .inscrit::after{content:' ✕'}
+.stand-name{font-weight:800;font-size:.87rem;padding:8px 14px;text-align:left;white-space:nowrap;border-right:3px solid #f0f0f0;position:sticky;left:0;z-index:2}
+.stand-name .emoji{margin-right:6px}
+tbody tr:nth-child(odd) .stand-name{background:#FFF8F0}
+tbody tr:nth-child(even) .stand-name{background:#F8FBFF}
 
-  .sep-row td{background:linear-gradient(90deg,#FFB703,#FB8500)!important;padding:7px 18px;
-    font-family:'Fredoka One',cursive;font-size:0.85rem;color:white;letter-spacing:1px}
-  .stand-input{width:100%;border:2px dashed #FFB703;border-radius:10px;padding:5px 10px;
-    font-family:'Nunito',sans-serif;font-size:0.82rem;font-weight:700;color:var(--texte);
-    background:white;outline:none}
-  .stand-input:focus{border-color:var(--orange);border-style:solid}
-  .stand-input::placeholder{color:#ccc;font-style:italic;font-weight:600}
+.cell{padding:4px 5px;text-align:center;border:1px solid #f0f0f0;vertical-align:top}
+tbody tr:nth-child(odd) .cell{background:#FFF8F0}
+tbody tr:nth-child(even) .cell{background:#F8FBFF}
+.slots{display:flex;flex-direction:column;gap:3px}
 
-  .overlay{display:none;position:fixed;inset:0;background:rgba(26,26,46,0.6);z-index:100;
-    backdrop-filter:blur(4px);align-items:center;justify-content:center}
-  .overlay.active{display:flex}
-  .modal{background:white;border-radius:24px;padding:30px 26px;width:90%;max-width:420px;
-    box-shadow:0 20px 60px rgba(0,0,0,0.25);text-align:center;
-    animation:popIn 0.25s cubic-bezier(0.34,1.56,0.64,1);border:3px solid var(--jaune)}
-  @keyframes popIn{from{transform:scale(0.7);opacity:0}to{transform:scale(1);opacity:1}}
-  .modal-emoji{font-size:2.2rem;margin-bottom:10px}
-  .modal h2{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--rouge);margin-bottom:4px}
-  .modal-admin h2{color:#9B5DE5!important}
-  .modal-admin{border-color:#9B5DE5!important}
-  .modal-info{font-size:0.86rem;color:#888;margin-bottom:16px;font-weight:600;line-height:1.7}
-  .modal-info strong{color:var(--texte)}
-  .modal input[type=text],.modal input[type=password]{width:100%;padding:12px 16px;
-    border:2px solid #e0e0e0;border-radius:14px;font-family:'Nunito',sans-serif;font-size:1rem;
-    font-weight:700;outline:none;transition:border 0.2s;margin-bottom:14px;color:var(--texte)}
-  .modal input:focus{border-color:var(--orange)}
-  .modal-btns{display:flex;gap:12px}
-  .btn-valider{flex:1;padding:12px;background:linear-gradient(135deg,#52B788,#40916C);color:white;
-    border:none;border-radius:14px;font-family:'Fredoka One',cursive;font-size:1.05rem;cursor:pointer;
-    transition:transform 0.15s;box-shadow:0 4px 15px rgba(82,183,136,0.4)}
-  .btn-valider:hover{transform:translateY(-2px)}
-  .btn-valider-admin{flex:1;padding:12px;background:linear-gradient(135deg,#9B5DE5,#6A0572);
-    color:white;border:none;border-radius:14px;font-family:'Fredoka One',cursive;font-size:1.05rem;cursor:pointer}
-  .btn-annuler{flex:1;padding:12px;background:#f0f0f0;color:#666;border:none;border-radius:14px;
-    font-family:'Fredoka One',cursive;font-size:1.05rem;cursor:pointer}
-  .btn-annuler:hover{background:#e0e0e0}
+.cell-mat{padding:6px;border:1px solid #f0f0f0;vertical-align:middle;text-align:center}
+tbody tr:nth-child(odd) .cell-mat{background:#EBF8FF}
+tbody tr:nth-child(even) .cell-mat{background:#F0FAFF}
+.mat-select{width:100%;padding:6px 4px;border:2px solid #BDE0F4;border-radius:10px;font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:700;background:white;cursor:pointer;color:var(--texte);outline:none;text-align:center}
+.mat-oui{background:#D8F3DC!important;border-color:var(--vert)!important;color:#2D6A4F!important}
+.mat-non{background:#FFE8E8!important;border-color:var(--rouge)!important;color:#9B2226!important}
+.mat-partiel{background:#FFF3CD!important;border-color:var(--jaune)!important;color:#7B5500!important}
 
-  .toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(100px);
-    background:#1a1a2e;color:white;padding:12px 24px;border-radius:50px;font-family:'Nunito',sans-serif;
-    font-weight:700;font-size:0.9rem;box-shadow:0 8px 30px rgba(0,0,0,0.3);z-index:200;
-    transition:transform 0.3s;pointer-events:none;white-space:nowrap}
-  .toast.show{transform:translateX(-50%) translateY(0)}
+.cell-comp{padding:6px;border:1px solid #f0f0f0;vertical-align:middle}
+tbody tr:nth-child(odd) .cell-comp{background:#F5F0FF}
+tbody tr:nth-child(even) .cell-comp{background:#FAF7FF}
+.comp-input{width:100%;padding:7px 8px;border:2px solid #E0D5FF;border-radius:10px;font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:600;background:white;color:var(--texte);outline:none}
+.comp-input:focus{border-color:var(--violet)}
+.comp-input::placeholder{color:#ccc;font-style:italic}
 
-  .err-banner{display:none;background:#FFE8E8;border:2px solid #E63946;border-radius:12px;
-    padding:12px 16px;margin-bottom:16px;font-size:0.82rem;color:#9B2226;font-weight:700;line-height:1.5}
-  .err-banner.visible{display:block}
+/* Textarea pour matériel dispo (montage) */
+.mat-dispo-input{width:100%;padding:7px 8px;border:2px solid #FDDCB5;border-radius:10px;font-family:'Nunito',sans-serif;font-size:.75rem;font-weight:600;background:white;color:var(--texte);outline:none;resize:vertical;min-height:48px}
+.mat-dispo-input:focus{border-color:var(--orange)}
+.mat-dispo-input::placeholder{color:#ccc;font-style:italic}
+.cell-mat-dispo{padding:6px;border:1px solid #f0f0f0;vertical-align:middle}
+tbody tr:nth-child(odd) .cell-mat-dispo{background:#FFF3E0}
+tbody tr:nth-child(even) .cell-mat-dispo{background:#FFF8F0}
 
-  footer{text-align:center;padding:20px;font-size:0.78rem;color:#bbb;font-weight:600}
-  @media(max-width:600px){.modal{padding:22px 14px}.stand-name{font-size:0.76rem;padding:8px 10px}}
+/* Checkbox cells (buvette) */
+.cell-buv{padding:6px 8px;border:1px solid #f0f0f0;vertical-align:middle;text-align:center}
+tbody tr:nth-child(odd) .cell-buv{background:#F5F0FF}
+tbody tr:nth-child(even) .cell-buv{background:#FAF7FF}
+.buv-list{display:flex;flex-direction:column;gap:3px;align-items:stretch}
+
+/* Inscription buttons */
+.btn-inscrire{width:100%;padding:5px 3px;border:2px dashed #ccc;background:transparent;border-radius:8px;font-family:'Nunito',sans-serif;font-size:.7rem;color:#aaa;cursor:pointer;transition:all .2s;font-weight:600}
+.btn-inscrire:hover{border-color:var(--vert);color:var(--vert);background:#52B78811;transform:scale(1.03)}
+.inscrit{background:linear-gradient(135deg,#52B788,#40916C)!important;color:white;border:2px solid #40916C!important;border-radius:8px;padding:4px 3px;font-size:.7rem;font-weight:800;cursor:pointer;width:100%;font-family:'Nunito',sans-serif;transition:all .2s;line-height:1.3}
+.inscrit:hover{background:linear-gradient(135deg,#E63946,#c1121f)!important;border-color:#c1121f!important;transform:scale(1.03)}
+.inscrit:hover::after{content:' ✕'}
+.admin-mode .inscrit{background:linear-gradient(135deg,#E63946,#c1121f)!important;border-color:#c1121f!important}
+.admin-mode .inscrit::after{content:' ✕'}
+
+.sep-row td{background:linear-gradient(90deg,#FFB703,#FB8500)!important;padding:7px 18px;font-family:'Fredoka One',cursive;font-size:.85rem;color:white;letter-spacing:1px}
+.stand-input{width:100%;border:2px dashed #FFB703;border-radius:10px;padding:5px 10px;font-family:'Nunito',sans-serif;font-size:.82rem;font-weight:700;color:var(--texte);background:white;outline:none}
+.stand-input:focus{border-color:var(--orange);border-style:solid}
+.stand-input::placeholder{color:#ccc;font-style:italic;font-weight:600}
+
+/* SECTION TITLES */
+.section-title{font-family:'Fredoka One',cursive;font-size:1.5rem;color:var(--texte);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.section-subtitle{font-size:.85rem;color:#888;font-weight:600;margin-bottom:18px}
+
+/* MODAL */
+.overlay{display:none;position:fixed;inset:0;background:rgba(26,26,46,.6);z-index:100;backdrop-filter:blur(4px);align-items:center;justify-content:center}
+.overlay.active{display:flex}
+.modal{background:white;border-radius:24px;padding:30px 26px;width:90%;max-width:420px;box-shadow:0 20px 60px rgba(0,0,0,.25);text-align:center;animation:popIn .25s cubic-bezier(.34,1.56,.64,1);border:3px solid var(--jaune)}
+@keyframes popIn{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}
+.modal-emoji{font-size:2.2rem;margin-bottom:10px}
+.modal h2{font-family:'Fredoka One',cursive;font-size:1.3rem;color:var(--rouge);margin-bottom:4px}
+.modal-admin h2{color:#9B5DE5!important}.modal-admin{border-color:#9B5DE5!important}
+.modal-info{font-size:.86rem;color:#888;margin-bottom:16px;font-weight:600;line-height:1.7}
+.modal-info strong{color:var(--texte)}
+.modal input[type=text],.modal input[type=password]{width:100%;padding:12px 16px;border:2px solid #e0e0e0;border-radius:14px;font-family:'Nunito',sans-serif;font-size:1rem;font-weight:700;outline:none;transition:border .2s;margin-bottom:14px;color:var(--texte)}
+.modal input:focus{border-color:var(--orange)}
+.modal-btns{display:flex;gap:12px}
+.btn-valider{flex:1;padding:12px;background:linear-gradient(135deg,#52B788,#40916C);color:white;border:none;border-radius:14px;font-family:'Fredoka One',cursive;font-size:1.05rem;cursor:pointer;transition:transform .15s;box-shadow:0 4px 15px rgba(82,183,136,.4)}
+.btn-valider:hover{transform:translateY(-2px)}
+.btn-valider-admin{flex:1;padding:12px;background:linear-gradient(135deg,#9B5DE5,#6A0572);color:white;border:none;border-radius:14px;font-family:'Fredoka One',cursive;font-size:1.05rem;cursor:pointer}
+.btn-annuler{flex:1;padding:12px;background:#f0f0f0;color:#666;border:none;border-radius:14px;font-family:'Fredoka One',cursive;font-size:1.05rem;cursor:pointer}
+.btn-annuler:hover{background:#e0e0e0}
+
+/* TOAST */
+.toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(100px);background:#1a1a2e;color:white;padding:12px 24px;border-radius:50px;font-family:'Nunito',sans-serif;font-weight:700;font-size:.9rem;box-shadow:0 8px 30px rgba(0,0,0,.3);z-index:200;transition:transform .3s;pointer-events:none;white-space:nowrap}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.err-banner{display:none;background:#FFE8E8;border:2px solid #E63946;border-radius:12px;padding:12px 16px;margin-bottom:16px;font-size:.82rem;color:#9B2226;font-weight:700;line-height:1.5}
+.err-banner.visible{display:block}
+
+footer{text-align:center;padding:20px;font-size:.78rem;color:#bbb;font-weight:600}
+@media(max-width:600px){.modal{padding:22px 14px}.stand-name{font-size:.76rem;padding:8px 10px}.tab-btn{padding:10px 14px;font-size:.88rem}}
 </style>
 </head>
 <body>
@@ -179,33 +174,33 @@
 <header>
   <div class="header-emojis">🎡 🎠 🎪</div>
   <h1>Fête de l'École Jules Verne 2026</h1>
-  <p class="subtitle">Organisation AESPE · Inscriptions Bénévoles · Inscrivez-vous sur un créneau · Indiquez si vous avez le matériel · Ajoutez un commentaire</p>
+  <p class="subtitle">Organisation AESPE · Inscriptions Bénévoles</p>
 </header>
 
 <div class="sync-bar">
   <div class="sync-left">
     <div class="sync-dot sync-load" id="sync-dot"></div>
     <span class="sync-text" id="sync-text">Connexion…</span>
-    <span style="font-size:0.76rem;color:#bbb">🔄 Actualisation toutes les 15 s</span>
+    <span style="font-size:.76rem;color:#bbb">🔄 Actualisation toutes les 15 s</span>
   </div>
   <button class="btn-admin-toggle" id="btn-admin-toggle" onclick="toggleAdminModal()">🔐 Admin</button>
 </div>
 
+<!-- NAVIGATION -->
+<div class="nav-tabs">
+  <button class="tab-btn active" onclick="showTab('stands')">🎪 Stands</button>
+  <button class="tab-btn" onclick="showTab('montage')">🔧 Montage &amp; Démontage</button>
+  <button class="tab-btn" onclick="showTab('buvette')">🍰 Vente Buvette</button>
+</div>
+
 <div class="legende">
-  <div class="legende-item"><div class="dot dot-libre"></div> Créneau libre</div>
-  <div class="legende-item"><div class="dot dot-pris"></div> Bénévole inscrit(e)</div>
-  <div class="legende-item"><div class="dot dot-mat"></div> Matériel dispo</div>
+  <div class="legende-item"><div class="dot dot-libre"></div> Libre</div>
+  <div class="legende-item"><div class="dot dot-pris"></div> Inscrit(e)</div>
   <div class="legende-item">💡 3 bénévoles max par créneau</div>
   <div class="legende-item">✏️ Cliquer sur un nom pour se désinscrire</div>
 </div>
 
 <main>
-  <div class="stats-bar">
-    <div class="stat-chip">🙋 Inscrits : <span class="stat-num" id="nb-inscrits">–</span></div>
-    <div class="stat-chip">🎯 Places libres : <span class="stat-num" id="nb-libres">–</span></div>
-    <div class="stat-chip">📦 Matériel confirmé : <span class="stat-num" id="nb-mat">–</span></div>
-  </div>
-
   <div class="err-banner" id="err-banner"></div>
 
   <div class="admin-panel" id="admin-panel">
@@ -217,11 +212,86 @@
     </div>
   </div>
 
-  <div class="table-wrap">
-    <table id="main-table">
-      <thead><tr id="header-row"><th class="th-stand">STAND</th></tr></thead>
-      <tbody id="tbody"></tbody>
-    </table>
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!--  ONGLET 1 : STANDS                                 -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section-panel active" id="panel-stands">
+    <div class="section-title">🎪 Stands de jeux</div>
+    <div class="section-subtitle">Inscrivez-vous sur un ou plusieurs créneaux · Matériel et commentaires bienvenus</div>
+
+    <div class="notice"><span>⚠️</span>En cas de spectacle, veillez à fermer les stands 10 min avant. <strong>La buvette reste ouverte.</strong></div>
+
+    <div class="stats-bar">
+      <div class="stat-chip">🙋 Inscrits : <span class="stat-num" id="s-nb-inscrits">–</span></div>
+      <div class="stat-chip">🎯 Places libres : <span class="stat-num" id="s-nb-libres">–</span></div>
+      <div class="stat-chip">📦 Matériel confirmé : <span class="stat-num" id="s-nb-mat">–</span></div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="table-stands">
+        <thead><tr id="hr-stands"><th class="th-stand">STAND</th></tr></thead>
+        <tbody id="tbody-stands"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!--  ONGLET 2 : MONTAGE / DÉMONTAGE                    -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section-panel" id="panel-montage">
+    <div class="section-title">🔧 Montage &amp; Démontage</div>
+    <div class="section-subtitle">Montage : 8h30 – 10h00 · Démontage : 13h30 – 15h00 · Inscrivez-vous et indiquez le matériel que vous pouvez apporter</div>
+
+    <div class="stats-bar">
+      <div class="stat-chip">🙋 Inscrits montage : <span class="stat-num" id="m-nb-mont">–</span></div>
+      <div class="stat-chip">🙋 Inscrits démontage : <span class="stat-num" id="m-nb-dem">–</span></div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="table-montage">
+        <thead>
+          <tr>
+            <th class="th-stand" style="border-radius:17px 0 0 0">BÉNÉVOLE</th>
+            <th class="th-montage">🔨 Montage<br><small style="font-family:Nunito;font-weight:600;font-size:.68rem">8h30 – 10h00</small></th>
+            <th class="th-demontage">📦 Démontage<br><small style="font-family:Nunito;font-weight:600;font-size:.68rem">13h30 – 15h00</small></th>
+            <th class="th-materiel-dispo">🏕️ Matériel à disposition<br><small style="font-family:Nunito;font-weight:600;font-size:.68rem">barnum, parasol, sono…</small></th>
+          </tr>
+        </thead>
+        <tbody id="tbody-montage"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!--  ONGLET 3 : VENTE BUVETTE                          -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="section-panel" id="panel-buvette">
+    <div class="section-title">🍰 Vente Buvette</div>
+    <div class="section-subtitle">Indiquez ce que vous pouvez apporter · Cochez les cases correspondantes</div>
+
+    <div class="stats-bar">
+      <div class="stat-chip">👨‍🍳 Contributeurs : <span class="stat-num" id="b-nb">–</span></div>
+      <div class="stat-chip">🎂 Gâteaux/Tartes : <span class="stat-num" id="b-nb-gat">–</span></div>
+      <div class="stat-chip">🥤 Boissons : <span class="stat-num" id="b-nb-boi">–</span></div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="table-buvette">
+        <thead>
+          <tr>
+            <th class="th-stand" style="border-radius:17px 0 0 0">BÉNÉVOLE</th>
+            <th class="th-buvette">🎂 Gâteaux/Tartes<br><small style="font-family:Nunito;font-weight:600;font-size:.68rem">sucré ou salé</small></th>
+            <th class="th-buvette">🥤 Boissons</th>
+            <th class="th-buvette">🍽️ Couverts &amp; assiettes<br><small style="font-family:Nunito;font-weight:600;font-size:.68rem">jetables</small></th>
+            <th class="th-buvette" style="border-radius:0 17px 0 0">🥂 Verres<br><small style="font-family:Nunito;font-weight:600;font-size:.68rem">jetables</small></th>
+          </tr>
+        </thead>
+        <tbody id="tbody-buvette"></tbody>
+      </table>
+    </div>
+    <div style="text-align:center;margin-top:10px">
+      <button class="btn-admin btn-export" onclick="addBuvetteRow()" style="font-size:.88rem">➕ Ajouter une ligne</button>
+    </div>
   </div>
 </main>
 
@@ -234,8 +304,7 @@
     <div class="modal-emoji">✋</div>
     <h2>Je m'inscris !</h2>
     <div class="modal-info">Stand : <strong id="m-stand"></strong><br>Créneau : <strong id="m-creneau"></strong></div>
-    <input type="text" id="m-input" placeholder="Votre prénom et nom" maxlength="40"
-      onkeydown="if(event.key==='Enter') valider()">
+    <input type="text" id="m-input" placeholder="Votre prénom et nom" maxlength="40" onkeydown="if(event.key==='Enter') valider()">
     <div class="modal-btns">
       <button class="btn-annuler" onclick="fermerModal(null,'overlay-inscr')">Annuler</button>
       <button class="btn-valider" onclick="valider()">✓ Valider</button>
@@ -249,8 +318,7 @@
     <div class="modal-emoji">🔐</div>
     <h2>Espace Admin</h2>
     <div class="modal-info">Entrez le mot de passe administrateur</div>
-    <input type="password" id="admin-pwd" placeholder="Mot de passe" maxlength="50"
-      onkeydown="if(event.key==='Enter') adminLogin()">
+    <input type="password" id="admin-pwd" placeholder="Mot de passe" maxlength="50" onkeydown="if(event.key==='Enter') adminLogin()">
     <div class="modal-btns">
       <button class="btn-annuler" onclick="fermerModal(null,'overlay-admin')">Annuler</button>
       <button class="btn-valider-admin" onclick="adminLogin()">✓ Connexion</button>
@@ -259,9 +327,9 @@
 </div>
 
 <script>
-// ─────────────────────────────────────────────────────────────────
-//  CONFIG  — seuls ces 3 paramètres sont à modifier si besoin
-// ─────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
+//  CONFIG
+// ═══════════════════════════════════════════════════════════════
 const CFG = {
   binId : "69cb78f336566621a8651ac0",
   key   : atob("JDJhJDEwJEJtTEsvL0hhS3JReHNTNHlOVDZvOWVURm9NU3NpWmR5Szd0em1CbDZ4a29yRloyWkNaVUEu"),
@@ -270,6 +338,9 @@ const CFG = {
   slots : 3
 };
 
+// ═══════════════════════════════════════════════════════════════
+//  DONNÉES STATIQUES
+// ═══════════════════════════════════════════════════════════════
 const STANDS = [
   {nom:"Maquillage",           emoji:"💄"},
   {nom:"Chamboultou",          emoji:"🥫"},
@@ -286,22 +357,31 @@ const STANDS = [
   {nom:"Courses d'œufs",       emoji:"🥚"},
   {nom:"Combat de sumo",       emoji:"🤼"},
   {nom:"Escape game",          emoji:"🔐"},
+  {nom:"Buvette",              emoji:"🥤"},
 ];
-const NB_LIBRES = 5;
-const CRÉNEAUX  = ["10:30","11:00","11:30","12:00","12:30","13:00"];
+const NB_LIBRES  = 5;
+const CRÉNEAUX   = ["10:30","11:00","11:30","12:00","12:30","13:00"];
+const NB_MONT    = 20; // lignes montage/démontage
+const NB_BUV_INIT = 15; // lignes buvette initiales
 
-// ─────────────────────────────────────────────────────────────────
-//  STATE
-// ─────────────────────────────────────────────────────────────────
-let S          = {inscrits:{}, materiels:{}, complements:{}, libreNoms:{}};
+// ═══════════════════════════════════════════════════════════════
+//  STATE  (chargé/sauvegardé sur JSONBin)
+// ═══════════════════════════════════════════════════════════════
+let S = {
+  inscrits:{}, materiels:{}, complements:{}, libreNoms:{},   // stands
+  montage:{},  // { "mXX|mont": nom, "mXX|dem": nom, "mXX|matdispo": texte }
+  buvette:{}   // { "bXX|nom": texte, "bXX|gateau": bool, "bXX|boisson": bool, "bXX|couverts": bool, "bXX|verres": bool }
+};
+let nbBuvRows  = NB_BUV_INIT;
 let isAdmin    = false;
 let isSaving   = false;
 let pendingKey = null;
 let pollTimer  = null;
+let activeTab  = 'stands';
 
-// ─────────────────────────────────────────────────────────────────
-//  API JSONBIN  (XMLHttpRequest — pas de problème CORS)
-// ─────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
+//  API JSONBIN
+// ═══════════════════════════════════════════════════════════════
 function xhr(method, url, headers, body) {
   return new Promise((resolve, reject) => {
     const r = new XMLHttpRequest();
@@ -313,7 +393,7 @@ function xhr(method, url, headers, body) {
         const j = JSON.parse(r.responseText);
         if (r.status >= 200 && r.status < 300) resolve(j);
         else reject(new Error("HTTP " + r.status + " — " + (j.message || r.responseText)));
-      } catch(e) { reject(new Error("Réponse invalide : " + r.responseText.slice(0,80))); }
+      } catch(e) { reject(new Error("Réponse invalide")); }
     };
     r.onerror   = () => reject(new Error("Pas de connexion internet"));
     r.ontimeout = () => reject(new Error("Délai dépassé (12 s)"));
@@ -330,319 +410,419 @@ async function apiLoad() {
   S.materiels   = rec.materiels   || {};
   S.complements = rec.complements || {};
   S.libreNoms   = rec.libreNoms   || {};
+  S.montage     = rec.montage     || {};
+  S.buvette     = rec.buvette     || {};
+  nbBuvRows     = rec.nbBuvRows   || NB_BUV_INIT;
 }
 
 async function apiSave() {
+  const payload = Object.assign({}, S, {nbBuvRows});
   await xhr("PUT",
     "https://api.jsonbin.io/v3/b/" + CFG.binId,
     {"Content-Type":"application/json","X-Master-Key":CFG.key,"X-Bin-Versioning":"false"},
-    JSON.stringify(S));
+    JSON.stringify(payload));
 }
 
-// ─────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
 //  SYNC HELPERS
-// ─────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
 function setDot(s) {
   document.getElementById("sync-dot").className = "sync-dot sync-" + s;
   document.getElementById("sync-text").textContent =
     {ok:"Synchronisé ✓", err:"Erreur de connexion ✗", load:"Synchronisation…"}[s];
 }
-
 function showErr(msg) {
   const el = document.getElementById("err-banner");
   el.innerHTML = "⚠️ " + msg + "<br><small>Vérifiez votre connexion internet puis rechargez la page.</small>";
   el.classList.add("visible");
 }
 function hideErr() { document.getElementById("err-banner").classList.remove("visible"); }
-
 function toast(msg) {
   const t = document.getElementById("toast");
   t.textContent = msg; t.classList.add("show");
   setTimeout(() => t.classList.remove("show"), 2800);
 }
-
 async function load() {
   setDot("load");
-  try {
-    await apiLoad();
-    setDot("ok"); hideErr();
-    return true;
-  } catch(e) {
-    setDot("err");
-    showErr("Chargement impossible : " + e.message);
-    return false;
-  }
+  try { await apiLoad(); setDot("ok"); hideErr(); return true; }
+  catch(e) { setDot("err"); showErr("Chargement : " + e.message); return false; }
 }
-
 async function save() {
   if (isSaving) return false;
-  isSaving = true;
-  setDot("load");
-  try {
-    await apiSave();
-    setDot("ok"); hideErr();
-    toast("✅ Sauvegardé !");
-    isSaving = false;
-    return true;
-  } catch(e) {
-    setDot("err");
-    showErr("Sauvegarde impossible : " + e.message);
-    toast("❌ Sauvegarde échouée");
-    isSaving = false;
-    return false;
-  }
+  isSaving = true; setDot("load");
+  try { await apiSave(); setDot("ok"); hideErr(); toast("✅ Sauvegardé !"); isSaving = false; return true; }
+  catch(e) { setDot("err"); showErr("Sauvegarde : " + e.message); toast("❌ Sauvegarde échouée"); isSaving = false; return false; }
 }
-
 function startPolling() {
   if (pollTimer) clearInterval(pollTimer);
-  pollTimer = setInterval(async () => {
-    if (await load()) buildTable();
-  }, CFG.poll);
+  pollTimer = setInterval(async () => { if (await load()) rebuildAll(); }, CFG.poll);
 }
 
-// ─────────────────────────────────────────────────────────────────
-//  TABLE
-// ─────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
+//  NAVIGATION
+// ═══════════════════════════════════════════════════════════════
+function showTab(tab) {
+  activeTab = tab;
+  document.querySelectorAll('.tab-btn').forEach((b,i) => {
+    b.classList.toggle('active', ['stands','montage','buvette'][i] === tab);
+  });
+  document.querySelectorAll('.section-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-' + tab).classList.add('active');
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  STANDS TABLE
+// ═══════════════════════════════════════════════════════════════
 function libreId(i) { return "__L" + i; }
 function sk(rowId, cr, i) { return rowId + "|" + cr + "|" + i; }
-
 function freeSlot(rowId, cr) {
-  for (let i = 0; i < CFG.slots; i++)
-    if (!S.inscrits[sk(rowId, cr, i)]) return sk(rowId, cr, i);
+  for (let i = 0; i < CFG.slots; i++) if (!S.inscrits[sk(rowId,cr,i)]) return sk(rowId,cr,i);
   return null;
 }
-
 function takenSlots(rowId, cr) {
   const out = [];
-  for (let i = 0; i < CFG.slots; i++) {
-    const k = sk(rowId, cr, i);
-    if (S.inscrits[k]) out.push({k, nom: S.inscrits[k]});
-  }
+  for (let i = 0; i < CFG.slots; i++) { const k=sk(rowId,cr,i); if(S.inscrits[k]) out.push({k, nom:S.inscrits[k]}); }
   return out;
 }
 
-function buildHeader() {
-  const hr = document.getElementById("header-row");
+function buildStandsHeader() {
+  const hr = document.getElementById("hr-stands");
   hr.innerHTML = '<th class="th-stand">STAND</th>';
-  const thM = document.createElement("th"); thM.className = "th-materiel";
-  thM.innerHTML = "📦 Matériel<br><small style='font-family:Nunito;font-weight:600;font-size:0.68rem'>disponible ?</small>";
+  const thM = document.createElement("th"); thM.className="th-mat";
+  thM.innerHTML = "📦 Matériel<br><small style='font-family:Nunito;font-weight:600;font-size:.68rem'>disponible ?</small>";
   hr.appendChild(thM);
-  const thC = document.createElement("th"); thC.className = "th-complement";
-  thC.innerHTML = "✏️ Complément<br><small style='font-family:Nunito;font-weight:600;font-size:0.68rem'>date dispo, remarque…</small>";
+  const thC = document.createElement("th"); thC.className="th-comp";
+  thC.innerHTML = "✏️ Complément<br><small style='font-family:Nunito;font-weight:600;font-size:.68rem'>date dispo, remarque…</small>";
   hr.appendChild(thC);
   CRÉNEAUX.forEach(c => {
-    const th = document.createElement("th"); th.className = "th-creneau";
-    th.innerHTML = c + "<br><small style='font-family:Nunito;font-weight:600;font-size:0.65rem;opacity:0.85'>max 3</small>";
+    const th = document.createElement("th"); th.className="th-cr";
+    th.innerHTML = c + "<br><small style='font-family:Nunito;font-weight:600;font-size:.65rem;opacity:.85'>max 3</small>";
     hr.appendChild(th);
   });
 }
 
 function matSelect(rowId) {
-  const sel = document.createElement("select"); sel.className = "mat-select";
+  const sel = document.createElement("select"); sel.className="mat-select";
   [["","— ?"],["oui","✅ Oui"],["partiel","⚠️ Partiel"],["non","❌ Non"]].forEach(([v,l]) => {
-    const o = document.createElement("option");
-    o.value = v; o.textContent = l;
-    if ((S.materiels[rowId]||"") === v) o.selected = true;
-    sel.appendChild(o);
+    const o = document.createElement("option"); o.value=v; o.textContent=l;
+    if ((S.materiels[rowId]||"")===v) o.selected=true; sel.appendChild(o);
   });
   applyMat(sel);
-  sel.onchange = async () => { S.materiels[rowId] = sel.value; applyMat(sel); updateStats(); await save(); };
+  sel.onchange = async () => { S.materiels[rowId]=sel.value; applyMat(sel); updateStandsStats(); await save(); };
   return sel;
 }
-
 function applyMat(sel) {
-  sel.className = "mat-select";
-  if (sel.value === "oui")     sel.classList.add("mat-oui");
-  if (sel.value === "non")     sel.classList.add("mat-non");
-  if (sel.value === "partiel") sel.classList.add("mat-partiel");
+  sel.className="mat-select";
+  if(sel.value==="oui") sel.classList.add("mat-oui");
+  if(sel.value==="non") sel.classList.add("mat-non");
+  if(sel.value==="partiel") sel.classList.add("mat-partiel");
 }
-
 function compInput(rowId) {
   const inp = document.createElement("input");
-  inp.type = "text"; inp.className = "comp-input";
-  inp.placeholder = "ex : dispo dès le 5 juin…"; inp.maxLength = 80;
-  inp.value = S.complements[rowId] || "";
-  let t;
-  inp.oninput = () => { S.complements[rowId] = inp.value; clearTimeout(t); t = setTimeout(save, 1500); };
+  inp.type="text"; inp.className="comp-input"; inp.placeholder="ex : dispo dès le 5 juin…"; inp.maxLength=80;
+  inp.value=S.complements[rowId]||"";
+  let t; inp.oninput=()=>{ S.complements[rowId]=inp.value; clearTimeout(t); t=setTimeout(save,1500); };
   return inp;
 }
-
 function creneauCell(rowId, cr, libre) {
-  const td = document.createElement("td"); td.className = "cell";
-  const div = document.createElement("div"); div.className = "slots";
-  takenSlots(rowId, cr).forEach(({k, nom}) => {
-    const b = document.createElement("button"); b.className = "inscrit";
-    b.textContent = nom; b.title = "Cliquer pour se désinscrire";
-    b.onclick = () => désinscrire(k);
-    div.appendChild(b);
+  const td = document.createElement("td"); td.className="cell";
+  const div = document.createElement("div"); div.className="slots";
+  takenSlots(rowId,cr).forEach(({k,nom}) => {
+    const b = document.createElement("button"); b.className="inscrit"; b.textContent=nom;
+    b.title="Cliquer pour se désinscrire"; b.onclick=()=>désinscrire(k); div.appendChild(b);
   });
-  const fk = freeSlot(rowId, cr);
+  const fk = freeSlot(rowId,cr);
   if (fk) {
-    const b = document.createElement("button"); b.className = "btn-inscrire";
-    b.textContent = takenSlots(rowId, cr).length === 0 ? "+ S'inscrire" : "+ Rejoindre";
-    const label = libre ? (S.libreNoms[rowId] || "Stand libre") : rowId;
-    b.onclick = () => openModal(label, cr, fk);
-    div.appendChild(b);
+    const b = document.createElement("button"); b.className="btn-inscrire";
+    b.textContent = takenSlots(rowId,cr).length===0 ? "+ S'inscrire" : "+ Rejoindre";
+    const label = libre ? (S.libreNoms[rowId]||"Stand libre") : rowId;
+    b.onclick = () => openModal(label, cr, fk); div.appendChild(b);
   }
-  td.appendChild(div);
-  return td;
+  td.appendChild(div); return td;
 }
-
-function makeRow(rowId, nameEl, libre) {
+function makeStandRow(rowId, nameEl, libre) {
   const tr = document.createElement("tr");
-  const tdN = document.createElement("td"); tdN.className = "stand-name"; tdN.appendChild(nameEl); tr.appendChild(tdN);
-  const tdM = document.createElement("td"); tdM.className = "cell-mat"; tdM.appendChild(matSelect(rowId)); tr.appendChild(tdM);
-  const tdC = document.createElement("td"); tdC.className = "cell-comp"; tdC.appendChild(compInput(rowId)); tr.appendChild(tdC);
-  CRÉNEAUX.forEach(c => tr.appendChild(creneauCell(rowId, c, libre)));
+  const tdN=document.createElement("td"); tdN.className="stand-name"; tdN.appendChild(nameEl); tr.appendChild(tdN);
+  const tdM=document.createElement("td"); tdM.className="cell-mat"; tdM.appendChild(matSelect(rowId)); tr.appendChild(tdM);
+  const tdC=document.createElement("td"); tdC.className="cell-comp"; tdC.appendChild(compInput(rowId)); tr.appendChild(tdC);
+  CRÉNEAUX.forEach(c => tr.appendChild(creneauCell(rowId,c,libre)));
   return tr;
 }
 
-function buildTable() {
-  buildHeader();
-  const tbody = document.getElementById("tbody");
-  tbody.innerHTML = "";
-  document.getElementById("main-table").classList.toggle("admin-mode", isAdmin);
-
+function buildStandsTable() {
+  buildStandsHeader();
+  const tbody = document.getElementById("tbody-stands");
+  tbody.innerHTML="";
+  document.getElementById("table-stands").classList.toggle("admin-mode",isAdmin);
   STANDS.forEach(s => {
-    const sp = document.createElement("span");
-    sp.innerHTML = `<span class="emoji">${s.emoji}</span>${s.nom}`;
-    tbody.appendChild(makeRow(s.nom, sp, false));
+    const sp=document.createElement("span"); sp.innerHTML=`<span class="emoji">${s.emoji}</span>${s.nom}`;
+    tbody.appendChild(makeStandRow(s.nom,sp,false));
   });
-
-  const sep = document.createElement("tr"); sep.className = "sep-row";
-  const std = document.createElement("td"); std.colSpan = 3 + CRÉNEAUX.length;
-  std.textContent = "✨ Proposez votre propre stand !"; sep.appendChild(std); tbody.appendChild(sep);
-
-  for (let i = 1; i <= NB_LIBRES; i++) {
-    const id = libreId(i);
-    const inp = document.createElement("input");
-    inp.type = "text"; inp.className = "stand-input";
-    inp.placeholder = "Nom du stand proposé…"; inp.maxLength = 40;
-    inp.value = S.libreNoms[id] || "";
-    let t;
-    inp.oninput = () => { S.libreNoms[id] = inp.value.trim(); clearTimeout(t); t = setTimeout(save, 1500); };
-    tbody.appendChild(makeRow(id, inp, true));
+  const sep=document.createElement("tr"); sep.className="sep-row";
+  const std=document.createElement("td"); std.colSpan=3+CRÉNEAUX.length; std.textContent="✨ Proposez votre propre stand !";
+  sep.appendChild(std); tbody.appendChild(sep);
+  for(let i=1;i<=NB_LIBRES;i++) {
+    const id=libreId(i);
+    const inp=document.createElement("input"); inp.type="text"; inp.className="stand-input";
+    inp.placeholder="Nom du stand proposé…"; inp.maxLength=40; inp.value=S.libreNoms[id]||"";
+    let t; inp.oninput=()=>{ S.libreNoms[id]=inp.value.trim(); clearTimeout(t); t=setTimeout(save,1500); };
+    tbody.appendChild(makeStandRow(id,inp,true));
   }
-  updateStats();
+  updateStandsStats();
 }
 
-function updateStats() {
-  const total = (STANDS.length + NB_LIBRES) * CRÉNEAUX.length * CFG.slots;
-  const nbI = Object.keys(S.inscrits).length;
-  document.getElementById("nb-inscrits").textContent = nbI;
-  document.getElementById("nb-libres").textContent   = total - nbI;
-  document.getElementById("nb-mat").textContent      = Object.values(S.materiels).filter(v => v === "oui").length;
+function updateStandsStats() {
+  const total=(STANDS.length+NB_LIBRES)*CRÉNEAUX.length*CFG.slots;
+  const nbI=Object.keys(S.inscrits).length;
+  document.getElementById("s-nb-inscrits").textContent=nbI;
+  document.getElementById("s-nb-libres").textContent=total-nbI;
+  document.getElementById("s-nb-mat").textContent=Object.values(S.materiels).filter(v=>v==="oui").length;
 }
 
-// ─────────────────────────────────────────────────────────────────
-//  INSCRIPTION
-// ─────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
+//  MONTAGE / DÉMONTAGE TABLE
+// ═══════════════════════════════════════════════════════════════
+function mKey(i, field) { return "m" + i + "|" + field; }
+
+function buildMontageTable() {
+  const tbody = document.getElementById("tbody-montage");
+  tbody.innerHTML="";
+  document.getElementById("table-montage").classList.toggle("admin-mode",isAdmin);
+  let mont=0, dem=0;
+  for(let i=1;i<=NB_MONT;i++) {
+    const tr=document.createElement("tr");
+    // Nom / label
+    const tdN=document.createElement("td"); tdN.className="stand-name";
+    const inp=document.createElement("input"); inp.type="text"; inp.className="stand-input";
+    inp.placeholder="Prénom Nom…"; inp.maxLength=40; inp.value=S.montage[mKey(i,"nom")]||"";
+    let t; inp.oninput=()=>{ S.montage[mKey(i,"nom")]=inp.value.trim(); clearTimeout(t); t=setTimeout(save,1500); };
+    tdN.appendChild(inp); tr.appendChild(tdN);
+    // Montage checkbox
+    const tdMont=document.createElement("td"); tdMont.className="cell"; tdMont.style.textAlign="center";
+    const chkM=makeCheckbox(mKey(i,"mont"), "Je participe au montage", async(v)=>{
+      S.montage[mKey(i,"mont")]=v; buildMontageStats(); await save();
+    });
+    tdMont.appendChild(chkM); tr.appendChild(tdMont);
+    // Démontage checkbox
+    const tdDem=document.createElement("td"); tdDem.className="cell"; tdDem.style.textAlign="center";
+    const chkD=makeCheckbox(mKey(i,"dem"), "Je participe au démontage", async(v)=>{
+      S.montage[mKey(i,"dem")]=v; buildMontageStats(); await save();
+    });
+    tdDem.appendChild(chkD); tr.appendChild(tdDem);
+    // Matériel dispo
+    const tdMD=document.createElement("td"); tdMD.className="cell-mat-dispo";
+    const ta=document.createElement("textarea"); ta.className="mat-dispo-input";
+    ta.placeholder="ex : 1 barnum 3×3m, 2 parasols, sono…"; ta.maxLength=150;
+    ta.value=S.montage[mKey(i,"matdispo")]||"";
+    let t2; ta.oninput=()=>{ S.montage[mKey(i,"matdispo")]=ta.value; clearTimeout(t2); t2=setTimeout(save,1500); };
+    tdMD.appendChild(ta); tr.appendChild(tdMD);
+    tbody.appendChild(tr);
+    if(S.montage[mKey(i,"mont")]) mont++;
+    if(S.montage[mKey(i,"dem")]) dem++;
+  }
+  document.getElementById("m-nb-mont").textContent=mont;
+  document.getElementById("m-nb-dem").textContent=dem;
+}
+
+function buildMontageStats() {
+  let mont=0,dem=0;
+  for(let i=1;i<=NB_MONT;i++){
+    if(S.montage[mKey(i,"mont")]) mont++;
+    if(S.montage[mKey(i,"dem")]) dem++;
+  }
+  document.getElementById("m-nb-mont").textContent=mont;
+  document.getElementById("m-nb-dem").textContent=dem;
+}
+
+function makeCheckbox(key, label, onChange) {
+  const wrap=document.createElement("label"); wrap.style.cssText="display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-size:.8rem;font-weight:700;color:#555";
+  const chk=document.createElement("input"); chk.type="checkbox"; chk.checked=!!S.montage[key];
+  chk.style.cssText="width:18px;height:18px;accent-color:#52B788;cursor:pointer";
+  chk.onchange=()=>onChange(chk.checked);
+  wrap.appendChild(chk); wrap.appendChild(document.createTextNode(label));
+  return wrap;
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  BUVETTE TABLE
+// ═══════════════════════════════════════════════════════════════
+function bKey(i, field) { return "b" + i + "|" + field; }
+
+function buildBuvetteTable() {
+  const tbody = document.getElementById("tbody-buvette");
+  tbody.innerHTML="";
+  document.getElementById("table-buvette").classList.toggle("admin-mode",isAdmin);
+  let nbG=0, nbB=0, nbPeople=0;
+  for(let i=1;i<=nbBuvRows;i++) {
+    const tr=document.createElement("tr");
+    // Nom
+    const tdN=document.createElement("td"); tdN.className="stand-name";
+    const inp=document.createElement("input"); inp.type="text"; inp.className="stand-input";
+    inp.placeholder="Prénom Nom…"; inp.maxLength=40; inp.value=S.buvette[bKey(i,"nom")]||"";
+    let t; inp.oninput=()=>{ S.buvette[bKey(i,"nom")]=inp.value.trim(); clearTimeout(t); t=setTimeout(save,1500); };
+    tdN.appendChild(inp); tr.appendChild(tdN);
+    // Colonnes contributeurs
+    const cols=[
+      {k:"gateau",  label:"🎂 Oui"},
+      {k:"boisson", label:"🥤 Oui"},
+      {k:"couverts",label:"🍽️ Oui"},
+      {k:"verres",  label:"🥂 Oui"},
+    ];
+    cols.forEach(col => {
+      const td=document.createElement("td"); td.className="cell-buv";
+      const wrap=document.createElement("label");
+      wrap.style.cssText="display:flex;align-items:center;justify-content:center;gap:6px;cursor:pointer;font-size:.8rem;font-weight:700;color:#555";
+      const chk=document.createElement("input"); chk.type="checkbox"; chk.checked=!!S.buvette[bKey(i,col.k)];
+      chk.style.cssText="width:18px;height:18px;accent-color:#9B5DE5;cursor:pointer";
+      chk.onchange=async()=>{ S.buvette[bKey(i,col.k)]=chk.checked; updateBuvetteStats(); await save(); };
+      wrap.appendChild(chk); wrap.appendChild(document.createTextNode(col.label));
+      td.appendChild(wrap); tr.appendChild(td);
+    });
+    tbody.appendChild(tr);
+    if(S.buvette[bKey(i,"nom")]) nbPeople++;
+    if(S.buvette[bKey(i,"gateau")]) nbG++;
+    if(S.buvette[bKey(i,"boisson")]) nbB++;
+  }
+  document.getElementById("b-nb").textContent=nbPeople;
+  document.getElementById("b-nb-gat").textContent=nbG;
+  document.getElementById("b-nb-boi").textContent=nbB;
+}
+
+function updateBuvetteStats() {
+  let nbG=0, nbB=0, nbP=0;
+  for(let i=1;i<=nbBuvRows;i++){
+    if(S.buvette[bKey(i,"nom")]) nbP++;
+    if(S.buvette[bKey(i,"gateau")]) nbG++;
+    if(S.buvette[bKey(i,"boisson")]) nbB++;
+  }
+  document.getElementById("b-nb").textContent=nbP;
+  document.getElementById("b-nb-gat").textContent=nbG;
+  document.getElementById("b-nb-boi").textContent=nbB;
+}
+
+async function addBuvetteRow() {
+  nbBuvRows++;
+  buildBuvetteTable();
+  await save();
+  toast("➕ Ligne ajoutée");
+}
+
+// ═══════════════════════════════════════════════════════════════
+//  INSCRIPTION (stands)
+// ═══════════════════════════════════════════════════════════════
 function openModal(stand, cr, k) {
-  pendingKey = k;
-  document.getElementById("m-stand").textContent   = stand;
-  document.getElementById("m-creneau").textContent = cr;
-  const inp = document.getElementById("m-input");
-  inp.value = ""; inp.style.borderColor = "#e0e0e0";
+  pendingKey=k;
+  document.getElementById("m-stand").textContent=stand;
+  document.getElementById("m-creneau").textContent=cr;
+  const inp=document.getElementById("m-input"); inp.value=""; inp.style.borderColor="#e0e0e0";
   document.getElementById("overlay-inscr").classList.add("active");
-  setTimeout(() => inp.focus(), 100);
+  setTimeout(()=>inp.focus(),100);
 }
-
 function fermerModal(e, id) {
-  if (e && e.target !== document.getElementById(id)) return;
+  if (e && e.target!==document.getElementById(id)) return;
   document.getElementById(id).classList.remove("active");
-  if (id === "overlay-inscr") pendingKey = null;
+  if (id==="overlay-inscr") pendingKey=null;
 }
-
 async function valider() {
-  const inp = document.getElementById("m-input");
-  const nom = inp.value.trim();
-  if (!nom) { inp.style.borderColor = "#E63946"; return; }
-  const k = pendingKey;
-  S.inscrits[k] = nom;
-  document.getElementById("overlay-inscr").classList.remove("active");
-  pendingKey = null;
-  buildTable();
-  const ok = await save();
-  if (!ok) { delete S.inscrits[k]; buildTable(); toast("❌ Inscription non enregistrée, réessayez"); }
+  const inp=document.getElementById("m-input"); const nom=inp.value.trim();
+  if(!nom){inp.style.borderColor="#E63946";return;}
+  const k=pendingKey; S.inscrits[k]=nom;
+  document.getElementById("overlay-inscr").classList.remove("active"); pendingKey=null;
+  buildStandsTable();
+  const ok=await save();
+  if(!ok){delete S.inscrits[k]; buildStandsTable(); toast("❌ Inscription non enregistrée, réessayez");}
 }
-
 async function désinscrire(k) {
-  const nom = S.inscrits[k];
-  if (!confirm((isAdmin ? "[Admin] Supprimer " : "Vous désinscrire (") + nom + ") ?")) return;
-  const bak = nom;
-  delete S.inscrits[k];
-  buildTable();
-  const ok = await save();
-  if (!ok) { S.inscrits[k] = bak; buildTable(); toast("❌ Désinscription non enregistrée, réessayez"); }
+  const nom=S.inscrits[k];
+  if(!confirm((isAdmin?"[Admin] Supprimer ":"Vous désinscrire (")+nom+") ?")) return;
+  const bak=nom; delete S.inscrits[k]; buildStandsTable();
+  const ok=await save();
+  if(!ok){S.inscrits[k]=bak; buildStandsTable(); toast("❌ Désinscription non enregistrée, réessayez");}
 }
 
-// ─────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
 //  ADMIN
-// ─────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
 function toggleAdminModal() {
-  if (isAdmin) { adminLogout(); return; }
-  document.getElementById("admin-pwd").value = "";
-  document.getElementById("admin-pwd").style.borderColor = "#e0e0e0";
+  if(isAdmin){adminLogout();return;}
+  document.getElementById("admin-pwd").value="";
+  document.getElementById("admin-pwd").style.borderColor="#e0e0e0";
   document.getElementById("overlay-admin").classList.add("active");
-  setTimeout(() => document.getElementById("admin-pwd").focus(), 100);
+  setTimeout(()=>document.getElementById("admin-pwd").focus(),100);
 }
-
 function adminLogin() {
-  if (document.getElementById("admin-pwd").value === CFG.pwd) {
-    isAdmin = true;
+  if(document.getElementById("admin-pwd").value===CFG.pwd){
+    isAdmin=true;
     document.getElementById("overlay-admin").classList.remove("active");
     document.getElementById("admin-panel").classList.add("visible");
     document.getElementById("btn-admin-toggle").classList.add("active");
-    document.getElementById("btn-admin-toggle").textContent = "🔓 Admin connecté";
-    buildTable(); toast("🔐 Mode admin activé");
+    document.getElementById("btn-admin-toggle").textContent="🔓 Admin connecté";
+    rebuildAll(); toast("🔐 Mode admin activé");
   } else {
-    document.getElementById("admin-pwd").style.borderColor = "#E63946";
+    document.getElementById("admin-pwd").style.borderColor="#E63946";
     toast("❌ Mot de passe incorrect");
   }
 }
-
 function adminLogout() {
-  isAdmin = false;
+  isAdmin=false;
   document.getElementById("admin-panel").classList.remove("visible");
   document.getElementById("btn-admin-toggle").classList.remove("active");
-  document.getElementById("btn-admin-toggle").textContent = "🔐 Admin";
-  buildTable(); toast("👋 Déconnecté");
+  document.getElementById("btn-admin-toggle").textContent="🔐 Admin";
+  rebuildAll(); toast("👋 Déconnecté");
 }
-
 async function adminReset() {
-  if (!confirm("⚠️ Réinitialiser TOUTES les inscriptions ?\nCette action est irréversible.")) return;
-  S = {inscrits:{}, materiels:{}, complements:{}, libreNoms:{}};
-  buildTable(); await save(); toast("🗑️ Tableau réinitialisé");
+  if(!confirm("⚠️ Réinitialiser TOUTES les données de toutes les sections ?\nCette action est irréversible.")) return;
+  S={inscrits:{},materiels:{},complements:{},libreNoms:{},montage:{},buvette:{}};
+  nbBuvRows=NB_BUV_INIT;
+  rebuildAll(); await save(); toast("🗑️ Tout réinitialisé");
 }
-
 function exportCSV() {
-  const lines = ["\uFEFFStand,Créneau,Place,Bénévole,Matériel,Complément"];
-  STANDS.forEach(s => {
-    CRÉNEAUX.forEach(c => {
-      for (let i = 0; i < CFG.slots; i++) {
-        const k = sk(s.nom, c, i);
-        if (S.inscrits[k]) lines.push([
-          `"${s.nom}"`,`"${c}"`, i+1,
-          `"${S.inscrits[k]}"`,
-          `"${S.materiels[s.nom]||""}"`,
-          `"${(S.complements[s.nom]||"").replace(/"/g,"'")}"`
-        ].join(","));
+  const lines=["\uFEFFSection,Stand/Bénévole,Créneau,Place,Nom,Matériel,Complément"];
+  STANDS.forEach(s=>{
+    CRÉNEAUX.forEach(c=>{
+      for(let i=0;i<CFG.slots;i++){
+        const k=sk(s.nom,c,i);
+        if(S.inscrits[k]) lines.push([`"Stands"`,`"${s.nom}"`,`"${c}"`,i+1,`"${S.inscrits[k]}"`,`"${S.materiels[s.nom]||""}"`,`"${(S.complements[s.nom]||"").replace(/"/g,"'")}"`].join(","));
       }
     });
   });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([lines.join("\n")], {type:"text/csv;charset=utf-8;"}));
-  a.download = "kermesse_inscriptions.csv";
-  a.click(); toast("📥 Export CSV téléchargé");
+  for(let i=1;i<=NB_MONT;i++){
+    const nom=S.montage[mKey(i,"nom")]||"";
+    if(nom||S.montage[mKey(i,"mont")]||S.montage[mKey(i,"dem")]){
+      lines.push([`"Montage"`,`"${nom}"`,`""`,`""`,`""`,
+        `"Montage:${S.montage[mKey(i,"mont")]?"Oui":"Non"} Démontage:${S.montage[mKey(i,"dem")]?"Oui":"Non"}"`,
+        `"${(S.montage[mKey(i,"matdispo")]||"").replace(/"/g,"'")}"`].join(","));
+    }
+  }
+  for(let i=1;i<=nbBuvRows;i++){
+    const nom=S.buvette[bKey(i,"nom")]||"";
+    if(nom){
+      lines.push([`"Buvette"`,`"${nom}"`,`""`,`""`,`""`,
+        `"Gâteaux:${S.buvette[bKey(i,"gateau")]?"Oui":"Non"} Boissons:${S.buvette[bKey(i,"boisson")]?"Oui":"Non"} Couverts:${S.buvette[bKey(i,"couverts")]?"Oui":"Non"} Verres:${S.buvette[bKey(i,"verres")]?"Oui":"Non"}"`,
+        `""`].join(","));
+    }
+  }
+  const a=document.createElement("a");
+  a.href=URL.createObjectURL(new Blob([lines.join("\n")],{type:"text/csv;charset=utf-8;"}));
+  a.download="kermesse_inscriptions.csv"; a.click(); toast("📥 Export CSV téléchargé");
 }
 
-// ─────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
+//  REBUILD ALL
+// ═══════════════════════════════════════════════════════════════
+function rebuildAll() {
+  buildStandsTable();
+  buildMontageTable();
+  buildBuvetteTable();
+}
+
+// ═══════════════════════════════════════════════════════════════
 //  INIT
-// ─────────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════════════
 (async () => {
   const ok = await load();
-  buildTable();
-  if (!ok) showErr("Impossible de charger les données. Vérifiez votre connexion internet et rechargez la page.");
+  rebuildAll();
+  if(!ok) showErr("Impossible de charger les données. Vérifiez votre connexion internet.");
   startPolling();
 })();
 </script>
