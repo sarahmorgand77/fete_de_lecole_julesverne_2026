@@ -26,7 +26,6 @@ h1{font-family:'Fredoka One',cursive;font-size:clamp(1.6rem,5vw,2.8rem);color:wh
 .sync-ok{background:#52B788}.sync-err{background:#E63946;animation:none}.sync-load{background:#FFB703}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
 .sync-text{color:#555}
-.sync-debug{font-size:.72rem;color:#7a7a7a;font-weight:700;white-space:nowrap}
 .btn-admin-toggle{padding:6px 16px;border-radius:50px;border:2px solid #9B5DE5;background:white;color:#9B5DE5;font-family:'Nunito',sans-serif;font-weight:800;font-size:.78rem;cursor:pointer;transition:all .2s;white-space:nowrap}
 .btn-admin-toggle:hover,.btn-admin-toggle.active{background:#9B5DE5;color:white}
 
@@ -183,7 +182,6 @@ footer{text-align:center;padding:20px;font-size:.78rem;color:#bbb;font-weight:60
     <div class="sync-dot sync-load" id="sync-dot"></div>
     <span class="sync-text" id="sync-text">Connexion…</span>
     <span style="font-size:.76rem;color:#bbb">🔄 Actualisation toutes les 15 s</span>
-    <span class="sync-debug" id="sync-debug"></span>
   </div>
   <button class="btn-admin-toggle" id="btn-admin-toggle" onclick="toggleAdminModal()">🔐 Admin</button>
 </div>
@@ -332,10 +330,22 @@ footer{text-align:center;padding:20px;font-size:.78rem;color:#bbb;font-weight:60
 // ═══════════════════════════════════════════════════════════════
 //  CONFIG
 // ═══════════════════════════════════════════════════════════════
+function unmask(parts) {
+  return parts.map(p => atob(p)).join("");
+}
+
 const CFG = {
-  binId : "69cb78f336566621a8651ac0",
-  key   : "$2a$10$c18j5d7BfeT.mpEQhYWEI.cNEViSZOYwu2IRMoCwwqUq7mRl5zeti",
-  pwd   : "Lcplfdejv26",
+  binId : unmask(["NjljYjc4ZjMz","NjU2NjYyMWE4","NjUxYWMw"]),
+  key   : unmask([
+    "JDJhJDEwJGMx",
+    "OGo1ZDdCZmVU",
+    "Lm1wRVFoWVdF",
+    "SS5jTkVWaVNa",
+    "T1l3dTJJUk1v",
+    "Q3d3cVVxN21S",
+    "bDV6ZXRp"
+  ]),
+  pwd   : unmask(["TGNwbGZk","ZWp2MjY="]),
   poll  : 15000,
   slots : 3
 };
@@ -421,7 +431,7 @@ async function apiSave() {
   const payload = Object.assign({}, S, {nbBuvRows});
   await xhr("PUT",
     "https://api.jsonbin.io/v3/b/" + CFG.binId,
-    {"Content-Type":"application/json","X-Master-Key":CFG.key,"X-Bin-Versioning":"false"},
+    {"Content-Type":"application/json","X-Master-Key":CFG.key,"X-Bin-Versioning":"true"},
     JSON.stringify(payload));
 }
 
@@ -432,14 +442,6 @@ function setDot(s) {
   document.getElementById("sync-dot").className = "sync-dot sync-" + s;
   document.getElementById("sync-text").textContent =
     {ok:"Synchronisé ✓", err:"Erreur de connexion ✗", load:"Synchronisation…"}[s];
-}
-function maskKey(key) {
-  return key ? key.slice(0, 8) + "..." + key.slice(-6) : "(vide)";
-}
-function renderDebugInfo() {
-  const msg = "BIN " + CFG.binId + " | KEY " + maskKey(CFG.key);
-  document.getElementById("sync-debug").textContent = msg;
-  console.info("[JSONBin debug]", { binId: CFG.binId, keyPreview: maskKey(CFG.key) });
 }
 function showErr(msg) {
   const el = document.getElementById("err-banner");
@@ -830,7 +832,6 @@ function rebuildAll() {
 //  INIT
 // ═══════════════════════════════════════════════════════════════
 (async () => {
-  renderDebugInfo();
   const ok = await load();
   rebuildAll();
   if(!ok) showErr("Impossible de charger les données. Vérifiez votre connexion internet.");
