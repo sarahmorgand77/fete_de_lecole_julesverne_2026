@@ -431,7 +431,7 @@ async function apiSave() {
   const payload = Object.assign({}, S, {nbBuvRows});
   await xhr("PUT",
     "https://api.jsonbin.io/v3/b/" + CFG.binId,
-    {"Content-Type":"application/json","X-Master-Key":CFG.key,"X-Bin-Versioning":"true"},
+    {"Content-Type":"application/json","X-Master-Key":CFG.key,"X-Bin-Versioning":"false"},
     JSON.stringify(payload));
 }
 
